@@ -1,0 +1,14 @@
+/* CSS Document */
+p {
+  color: white;
+}
+body {
+  width: 900px;
+  margin: 0 auto;
+  background-color: #FF9500;
+  background: url("../image/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0 20px 20px 20px;
+  border: #8D8686olid black;
+}
