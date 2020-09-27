@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="对应主页名称" content="天一阁">
+	<meta name="作用" content="笔记">
+	
+	<title>博客网页</title>
+
+</head>
+	<link href="style/cloer.css" rel="stylesheet">
+	<style>
+	
+		.ulist{
+			list-style-type: none;
+		}
+		
+		.list{
+			width:100px;height:20px;float: left;
+		}
+	</style>
+
+	<!--文本框设计；-->
+	<style>
+        
+        textarea{
+            display:block;
+            width:500px;
+            height:200px;
+            margin:100px auto 0;
+        }
+        .btn{
+            width:500px;
+            margin:10px auto;
+            text-align:right;
+        }
+        .msg{
+            margin:0 auto;
+            width:500px;
+			background-color: antiquewhite;
+        }
+	
+        .msglist{
+			width: auto;
+            line-height:0px;
+            text-indent: 2em;/*开头空两个字符*/
+			color:aliceblue;
+        }
+		
+		.textareastyle{
+			background-color: aliceblue;
+		}
+    </style>
+	<!--".msglist":文本输出属性;".msg":总文本输出框属性;".btn":按钮风格;-->
+	<!--注释：知识1：style中，可定义多样类型，在引用时可利用 class="类型名"，对style的类型进行引用；知识3：-->
+	<!--文本框设计；-->
+	
+<body>
+	<!--顶部设计-->
+	<h1 style="font-family:verdana;padding:20px;border-radius:10px;border:10px solid #EE872A;letter-spacing:12px;text-align:center;font-style: normal;background-color: #636161;color: #F5F4F4">天一阁</h1>
+	
+	<img scr="image/天一阁.png" alt="博客主页">
+	<p style="text-align:center;font-size:20px;color: #15F7ED">欢迎来到天一阁</p>
+	<!--顶部设计-->
+	
+	<ul class="ulist">
+		<li class="list"><a href="study.html" target="_self" >返回首页</a></li>
+		<li class="list"><a href="https://www.pornhub.com" target="_self">炼武堂</a></li>
+		<li class="list"><a href="https://cn.bing.com" target="_self">聚义堂</a></li>
+		<li class="list"><a href="https://www.qq.com" target="_self">试炼之地</a></li>
+	</ul>
+	
+	<br><br>
+	
+<!--文本框设计；-->
+    <textarea cols="30" rows="10" class="textareastyle"></textarea>
+    <div class="btn">
+        <button class="textareastyle">提交</button>
+    </div>
+    <ul class="msg" ></ul>
+    <script>
+        let btn=document.querySelector("button"),//获得button元素
+            textArea=document.querySelector("textarea"),
+            msg=document.querySelector(".msg");
+        btn.onclick=function(){
+            if(textArea.value){
+                msg.innerHTML+="<li  class='msglist'>"+textArea.value+"</li>";//将标签信息添加到ul中
+                textArea.value="";//清空输入框
+            }else{
+                alert("你尚未输入信息,请重新输入")
+            }
+        }       
+    </script>
+<!--文本框设计；-->
+	
+</body>
+</html>

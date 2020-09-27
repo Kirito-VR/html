@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+	
+	
+	<meta charset="utf-8">
+	<meta name="Keywords" content="keep,study,学习,k-c,K-C,学习平台">
+	<meta name="Description" content="学习交流平台">
+	<meta name="autor" content="Kirito.chen">
+		<!--注释：meta name=""	可用于多样活动；用于备注网页，告知网页的关键字，信息等-->
+
+	
+	<h1><strong>首页</strong></h1>
+	<title>主页</title>
+
+	<!--脚本1-->
+	<script>
+		function displayDate(){
+			document.getElementById("demo").innerHTML=Date();
+		}
+	</script>
+	<!--注释：1.<script>:脚本编写标签；2.function：相当于python的函数定义标签def;3.document:获取html中的节点。其中属性，参考https://www.runoob.com/jsref/dom-obj-document.html；4.getElementById():document属性的一种，返回该名称的节点，对其进行操作。5.innerHTML:改变该文本为指定对象；-->
+
+	<!--脚本2-->
+	<script>
+		var x=0;
+		function changeLink(){
+			
+			if(x==0){
+				document.getElementById("Link1").innerHTML="Baidu";
+				document.getElementById("Link1").href="https://www.baidu.com";
+				x=1;
+			}
+			else{
+				document.getElementById("Link1").innerHTML="hao123";
+				document.getElementById("Link1").href="https://www.hao123.com";
+				x=0;
+			}
+
+		}
+	</script>
+	<!--问题：链接无法更改无法点击；文本可变化(已解决)，原因：Link1该元素定位在以<p>为元素的段落，函数改变的是<a>元素里的链接，最后文档显示的为<p>的文本；故无法显示链接；注释：在没有改变一个元素的属性的时候，改变局部属性，不会影响其余属性。例如：target不会随链接的更替，而恢复默认的_self属性，而是继承最后赋值的属性；	9/9问题：无法进行判断。导致代码无法运行;；注释：引号打错，条件判断需要加入大括号进行范围限定；对-->
+	
+	<!--脚本3:验证码的生成-->
+	<script>
+		function code(){
+			const rand=Math.random();
+			document.getElementById("code").innerHTML= Math.floor(rand*10000);
+			
+		}
+	</script>
+	<!--问题：如何将控制输出数字的浮点数。单纯的将数字*1000，挑不出3000-5000这个范围。random所返回的是’0~1‘-->
+	
+	<!--脚本4：实现视频的转播放-->
+	<script>
+		
+	</script>
+	
+	
+</head>
+	<link href="style/cloer.css" rel="stylesheet">
+
+	<style>
+	
+		.ulist{
+			list-style-type: none;
+		}
+		
+		.list{
+			width:100px;height:20px;float: left;
+		}
+	</style>
+	
+<body>
+	<img src="image/loge.png" alt="主页">
+	<p>欢迎来到--<strong>K-C学习平台</strong></p>
+	
+	<!--脚本2-->
+	<p><a id="Link1" href="https://www.hao123.com" target="_blank">hao123</a></p>
+	<button type="button" onclick="changeLink()">更换链接</button>
+	<!--脚本2：脚本的运用-->
+	
+	<!--脚本3-->
+	<p id="code">随机验证码</p>
+	<button onClick="code()">生成</button>
+	<!--脚本3-->
+		
+	<ul class="ulist">
+	<li class="list"><p><a href="https://www.pornhub.com" target="_blank" rel="noopener noreferrer">炼武堂</a></p></li>
+	<!--注释： target=""'表示为超链接的打开方式'；第一种为默认的'_self':在本页面打开；2.'_blank':打开新的页面，在新页面载入文档。也就是页面；3."_parent":父级窗口打开也就是上一级窗口；4."_top":顶级窗口打开也就是源窗口；-->
+
+	<li class="list"><p><a href="https://cn.bing.com" target="_parent" rel="noopener noreferrer">聚义堂</a></p></li>	
+	<!--注释： href=""	指的是链接地址；rel="noopener noreferrer":指该网页服务器无法从外部打开；保障网页安全，防止有人篡改超链接；但网页流量监控可能会收到影响-->
+	
+	<li class="list"><p><a href="https://www.qq.com" target="_blank" rel="noopener noreferrer">试炼之地</a></p></li>
+	
+	<li class="list"><p><a href="天一阁.html" target="_self" ral="noopener noreferrer">天一阁</a></p></li>
+	</ul>
+	
+	<br>
+	<p>这是我用于</p>
+	<ul>
+		<li>复习和学习</li>
+		<li>分享学习经验</li>
+		<li>提供交流</li>
+	</ul>
+	
+	<p>我将致力于努力提升自己学习和能力</p>
+	
+	<!--链接的几种用法-->
+	<p><a href="tel:10086;">打电话</a></p>
+	<p><a href="mailto:1050087164@qq.com">send the e-mail to 1050087164@qq.com</a></p>
+	<a href="https://www.baidu.com" target="_top" rel="noopener noreferrer">网站初心</a>
+		
+	<!--注释：'div':标签定义 HTML 文档中的一个分隔区块或者一个区域部分-->
+		<div style="opacity:0.5;position:absolute;left:50px;width:300px;height:150px;background-color:#40B3DF"></div>
+			<!--注释1：opacity'透明度'；position:absolute：‘绝对位置（上层），后者不改变其位置，’；其余就是其属性； -->
+
+		<div style="font-family:verdana;padding:20px;border-radius:10px;border:10px solid #EE872A;">
+			<!--注释2：padding:边框，verdana：网上显示为字体，border-radius:圆角；solid：实线；-->
+
+		<div style="opacity:0.3;position:absolute;left:120px;width:100px;height:200px;background-color:#8AC007"></div>
+			<!--注释3：opacity：‘不透明度’；-->
+	
+			<h3>Look! Styles and colors</h3>
+
+		<div style="letter-spacing:12px;">Manipulate Text</div>	<!--letter-spacing：‘字符间距’-->
+
+		<div style="color:#40B3DF;">Colors
+		<span style="background-color:#B4009E;color:#ffffff;">Boxes</span>
+		</div>
+
+		<div style="color:#000000;">and more...</div>
+
+		</div>
+	
+	<!--脚本1-->
+		<h1>我的第一个 JavaScript 程序</h1>
+		<p id="demo">这是一个段落</p>
+		<button type="button" onclick="displayDate()">显示日期</button>
+	<!--注释：1.将段落节点标志id："demo"；2.button:定义一个按钮，type:button;规定如此，与input所定义的按钮更具有灵活性；在 <button> 元素内部，您可以放置内容，比如文本或图像。这是该元素与使用 <input> 元素创建的按钮之间的不同之处。但不同浏览器会产生出不一样的效果。input则不会；3.onclick:事件属性，单击执行脚本。更多事件属性参考"https://www.runoob.com/tags/ref-eventattributes.html"-->
+
+</body>
+</html>
